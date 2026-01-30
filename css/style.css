@@ -130,16 +130,17 @@ h2 {
 
 .tag {
     color: var(--orange);
-    font-size: 14px;
-    position: relative;
+    font-size: 12px;
     font-weight: 500;
+    background: rgba(255, 140, 66, 0.2);
+    border-radius: 3px;
+    padding: 4px 10px;
 }
 
-.tag:not(:last-child):after {
-    content: "•";
-    position: absolute;
-    right: -12px;
-    color: var(--text-muted);
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .about-text {

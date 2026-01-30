@@ -64,7 +64,7 @@ function renderProjects(projects) {
 function createProjectElement(project) {
   const techTags = project.technologies
     .map((tech) => `<span class="tag">${tech}</span>`)
-    .join(" ");
+    .join("");
 
   return `
     <div class="project-item">
