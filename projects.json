@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "title": "Joinery: Lightweight, Federated Query Engine in Python",
+      "githubUrl": "https://github.com/Jayanth-Shanmugam/joinery",
+      "description": "Joinery is a lightweight, federated query engine that lets you query data from disparate tables like they are one. It has features for parsing, predicate-pushdown, and async querying from data sources. It also comes with a small database explorer that lets you add, remove, and edit data source, along with a minimal SQL query editor.",
+      "technologies": ["Python", "DuckDB", "Pandas", "SQLAlchemy", "SQLGlot"]
+    },
+    {
+      "title": "PostgreSQL --> Iceberg CDC Pipeline", 
+      "githubUrl": "https://github.com/Jayanth-Shanmugam/cdc",
+      "description": "This project is a simple Change Data Capture (CDC) pipline from PostgreSQL to Apache Iceberg using RabbitMQ as the message queue to handle the WAL changes. It uses the wal2json plugin for PostgreSQL to convert binary WAL data to JSON and a custom Python script to stream these changes to RabbitMQ using pyscopg2 library. On the consumer side, the script read incoming changes from RabbitMQ and applied them to an Apache Iceberg table. I developed this project to mimic a CDC pipeline in typical lakehouse architecture.",
+      "technologies": ["Python", "PostgreSQL", "RabbitMQ", "Apache Iceberg"]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "blogs": [
+    {
+      "title": "What I learned From My First System Design Interview",
+      "url": "",
+      "publishDate": "2024-01-15",
+      "summary": "I layout what questions were asked during my system design interview for a data engineering role at Tesla, what according to me went wrong, and what I'm doing to work on my system design skills"
+    }
+  ]
+}
