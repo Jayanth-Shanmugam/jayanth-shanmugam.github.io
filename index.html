@@ -152,62 +152,12 @@
 
             <section id="projects" class="section">
                 <h2>Projects</h2>
-                <div class="project-item">
-                    <h3>
-                        <a href="https://github.com/Jayanth-Shanmugam/joinery"
-                           class="project-link"
-                        >    
-                        Joinery: Lightweight, Federated Query Engine in Python
-                        </a>
-                    </h3>
-                    <p class="project-description">
-                        Joinery is a lightweight, federated query engine that
-                        lets you query data from disparate tables like they are
-                        one. It has features for parsing, predicate-pushdown,
-                        and async querying from data sources. It also comes with
-                        a small database explorer that lets you add, remove, and
-                        edit data source, along with a minimal SQL query editor.
-                    </p>
-                    <p class="project-tech">
-                        <span class="tag">
-                            Python • DuckDB • Pandas • SQLAlchemy • SQLGlot
-                        </span>
-                    </p>
-                </div>
-                <div class="project-item">
-                    <h3>
-                        <a href="https://github.com/Jayanth-Shanmugam/cdc"
-                           class="project-link"
-                        >    
-                        PostgreSQL --> Iceberg CDC Pipeline
-                        </a>
-                    </h3>
-                    <p class="project-description">
-                        This project is a simple Change Data Capture (CDC) pipline from PostgreSQL
-                        to Apache Iceberg using RabbitMQ as the message queue to handle the WAL changes.
-                        It uses the wal2json plugin for PostgreSQL to convert binary WAL data to JSON and 
-                        a custom Python script to stream these changes to RabbitMQ using pyscopg2 library.
-                        On the consumer side, the script read incoming changes from RabbitMQ and applied them
-                        to an Apache Iceberg table. I developed this project to mimic a CDC pipeline in typical lakehouse 
-                        architecture.
-                    </p>
-                    <p class="project-tech">
-                        <span class="tag">
-                            Python • PostgreSQL • RabbitMQ • Apache Iceberg
-                        </span>
-                    </p>
-                </div>
+                <div id="projects-container"></div>
             </section>
 
             <section id="blog" class="section">
                 <h2>Blog</h2>
-                <div class="blog-item">
-                    <h3>What I learned From My First System Design Interview</h3>
-                    <p class="blog-summary">
-                        I layout what questions were asked during my system design interview for a data engineering 
-                        role at Tesla, what according to me went wrong, and what I'm doing to work on my system design skills
-                    </p>
-                </div>
+                <div id="blog-container"></div>
             </section>
         </div>
     </body>
