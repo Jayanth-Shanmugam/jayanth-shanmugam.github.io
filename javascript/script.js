@@ -40,10 +40,16 @@ function toggleTheme() {
 }
 
 function updateThemeIcon(theme) {
-  const icon = document.querySelector(".theme-icon");
-  if (icon) {
-    icon.textContent = theme === "dark" ? "☾" : "☀";
-  }
+    const moonIcon = document.querySelector(".theme-icon-moon");
+    const sunIcon = document.querySelector(".theme-icon-sun");
+    
+    if (theme === "dark") {
+        moonIcon.style.display = "block";
+        sunIcon.style.display = "none";
+    } else {
+        moonIcon.style.display = "none";
+        sunIcon.style.display = "block";
+    }
 }
 
 async function loadContent() {

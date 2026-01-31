@@ -78,11 +78,71 @@ nav {
     right: 0;
     padding: 30px 40px;
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
     background: var(--bg);
     border-bottom: 1px solid var(--text-muted);
     z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--text-primary);
+}
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--text-secondary);
+    position: absolute;
+    right: 40px;
+}
+
+.theme-toggle:hover {
+    color: var(--orange);
+    background: rgba(255, 140, 66, 0.1);
+    transform: scale(1.05);
+}
+
+.theme-icon {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+}
+
+.theme-icon-sun,
+.theme-icon-moon {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+[data-theme="light"] .theme-icon-moon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-icon-sun {
+    display: none;
 }
 
 nav a {
@@ -270,8 +330,16 @@ h2 {
 
 @media (max-width: 768px) {
     nav {
-        gap: 25px;
         padding: 25px 30px;
+    }
+
+    .nav-links {
+        gap: 25px;
+        padding-left: 0;
+    }
+
+    .theme-toggle {
+        right: 30px;
     }
 
     .container {
