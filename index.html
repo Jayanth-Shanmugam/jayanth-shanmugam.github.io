@@ -4,8 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Jayanth Shanmugam</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;0,500;1,400&display=swap"
             rel="stylesheet"
         />
         <link href="./css/style.css" rel="stylesheet" />
@@ -13,6 +19,13 @@
     </head>
     <body data-theme="dark">
         <nav>
+            <button
+                class="theme-toggle"
+                onclick="toggleTheme()"
+                aria-label="Toggle theme"
+            >
+                <span class="theme-icon">☾</span>
+            </button>
             <a
                 href="#about"
                 class="nav-link active"
@@ -32,7 +45,7 @@
 
         <div class="container">
             <section id="about" class="section active">
-                <h1>Hi, I'm Jayanth.</h1>
+                <h1 class="header-serif">Hi, I'm Jayanth.</h1>
 
                 <div class="tags">
                     <span class="tag">Python</span>

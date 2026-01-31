@@ -28,6 +28,24 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   });
 });
 
+function toggleTheme() {
+  const body = document.body;
+  const currentTheme = body.getAttribute("data-theme");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+  body.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+
+  updateThemeIcon(newTheme);
+}
+
+function updateThemeIcon(theme) {
+  const icon = document.querySelector(".theme-icon");
+  if (icon) {
+    icon.textContent = theme === "dark" ? "☾" : "☀";
+  }
+}
+
 async function loadContent() {
   try {
     const [projectsResponse, blogsResponse] = await Promise.all([
@@ -107,4 +125,10 @@ function createBlogElement(blog) {
   `;
 }
 
-document.addEventListener("DOMContentLoaded", loadContent);
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  document.body.setAttribute("data-theme", savedTheme);
+  updateThemeIcon(savedTheme);
+
+  loadContent();
+});
