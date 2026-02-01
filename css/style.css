@@ -50,35 +50,14 @@ body {
     color: var(--text-primary);
 }
 
-.theme-toggle {
-    position: fixed;
-    top: 30px;
-    right: 40px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 1000;
-    opacity: 0.6;
-    transition: all 0.3s;
-    padding: 8px;
-    border-radius: 50%;
-    color: var(--text-primary);
-}
-
-.theme-toggle:hover {
-    opacity: 1;
-    background: rgba(128, 128, 128, 0.1);
-}
-
 nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: 30px 40px;
+    padding: 24px 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background: var(--bg);
     border-bottom: 1px solid var(--text-muted);
@@ -87,15 +66,13 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 40px;
-    margin: 0 auto;
-    padding-left: 60px;
+    gap: 50px;
 }
 
 nav a {
     color: var(--text-secondary);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     transition: color 0.3s;
     cursor: pointer;
 }
@@ -118,12 +95,14 @@ nav a.active {
     color: var(--text-secondary);
     position: absolute;
     right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .theme-toggle:hover {
     color: var(--orange);
     background: rgba(255, 140, 66, 0.1);
-    transform: scale(1.05);
+    transform: translateY(-50%) scale(1.05);
 }
 
 .theme-icon {
@@ -143,19 +122,6 @@ nav a.active {
 
 [data-theme="dark"] .theme-icon-sun {
     display: none;
-}
-
-nav a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
-    cursor: pointer;
-}
-
-nav a:hover,
-nav a.active {
-    color: var(--text-primary);
 }
 
 .container {
@@ -257,20 +223,35 @@ h2 {
 
 .social-links {
     display: flex;
-    gap: 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
     margin-top: 60px;
 }
 
-.social-links a {
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: var(--text-primary);
-    font-size: 24px;
-    opacity: 0.7;
-    transition: opacity 0.3s;
     text-decoration: none;
+    opacity: 0.7;
+    transition: all 0.3s;
 }
 
-.social-links a:hover {
+.social-link:hover {
     opacity: 1;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.social-handle {
+    font-size: 13px;
+    font-family: "Geist", monospace;
 }
 
 .project-link,
@@ -330,16 +311,24 @@ h2 {
 
 @media (max-width: 768px) {
     nav {
-        padding: 25px 30px;
+        padding: 20px 30px;
     }
 
     .nav-links {
-        gap: 25px;
-        padding-left: 0;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
     }
 
     .theme-toggle {
         right: 30px;
+        transform: translateY(-50%);
+    }
+
+    .theme-toggle:hover {
+        transform: translateY(-50%) scale(1.05);
     }
 
     .container {
